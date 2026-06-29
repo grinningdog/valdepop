@@ -48,7 +48,43 @@ const DEFAULT_EVENTS = [
         "id": 4,
         "title": "Asturias and Cantabria",
         "date": "September 2027",
-        "description": "We will be staying in Cangas de Onis on the Cantabria/Asturias border. Bed and breakfast. Hotel Casa de Campo. It has a restaurant, but if you want an evening meal out in Cangas, the coach will transport you.\n\nWe are going to break the long journey by stopping for one night on the way there in Tudela at the Hotel Sercotel, then one night on the return journey at the Hotel Tibur in Zaragoza. There will be plenty of comfort breaks when travelling.\n\nPRICE: €860 pp for a couple\n(320 single supplement)\nPrice set for 40 persons to go.\nA €200 euro deposit per person will be required when putting your name down. If you pay by bank transfer, your surname and the letters \"Ast/Cant\" must be used as a reference so we know who sent it and which trip it refers to.\nItinerary\n\nDepart Xalo on 12th September 2027 to Tudela for 1 night Hotel Sercotel (comfort breaks on the way).\n\nThe coach will leave Xalo rastro car park, time to be arranged.\n\nDay 2—13/09—Breakfast, then drive to destination Cangas de Onis, Hotel Casa de Campo, time to unpack and stroll around and find somewhere to have your evening meal. As stated if you don't want to use the hotel restaurant, the coach will take us into Cangas. We are approximately 3 kilometres from the centre of the town.\n\nDay 3—14/09—Breakfast and depart to visit with a local guide:- Santander (capital of Cantabria). Pereda Gardens, Santander Cathedral. Lighthouse to view entire city and Magdalena peninsula. Lunchtime. Afternoon Santillana del Mar and a walking tour of its historic centre. Onwards then to Comillas, passing the Sobrellano Palace to visit Gaudi's Capricho (one of his first houses he designed, entrance inc). Return to Cangas de Onis and hotel.\n\nDay 4—15/09—Breakfast then visit Oviedo (capital of Asturias) with a local guide. Coach will take us on a panoramic tour of the city, passing the Palacio de Congresos, Campo de San Francisco and Campoamor theatre where the Princess of Asturias awards ceremony takes place, making our way to the Market. Lunchtime. Afternoon visit Gijon with a local guide. Return to our hotel.\n\nDay 5—16/09—Visit the famous Basilica of Covadonga along with the holy cave. Lunchtime. Afternoon visit Ribadesella and take a tour of the Lonja, Old Town, Fishing Port and Paseo Indiano. Return to our hotel.\n\nDay 6—17/09—Breakfast and depart to the Picos de Europa. Going through the Hermida gorge to Fuente Dé, where we can go up by cable car to admire the views of the Mirador del Cable. Continue onto the Monastry of Santo Toribio de Liébana, where the largest piece of the cross of Christ is preserved. We then visit Potes (capital of Picos de Europa) touring its historic centre. Lunchtime. Afternoon we visit San Vicente de la Barquera, a very popular fishing village on the Cantabrian coast. There is a castle here as well as a rich heritage. Return to hotel.\n\nDay 7—18/09—Breakfast and depart Cangas de Onis for El Soplao caves (entrance inc). Onward to Zaragoza, Hotel Tibur, (1 night) free time in the city.\n\nDay 8—19/09—Breakfast, depart Zaragoza to Xalo. Comfort breaks en route.\n\nIncluded in the price is all the coach travel, breakfasts, accommodation, an English speaking guide to accompany us and basic travel insurance. Lunches and evening meals are NOT included. Also 2 entrance fees included.\n\nPlease be aware:- whilst every effort is made to accommodate all dietary requirements, it may be beneficial to carry your own snacks. Also regarding mobility—there is walking and climbing steps/stairs on some of the excursions and not sure if all hotels have a lift.\n\nTo Book contact:-\n\nSonia Higginson at GA's or coffee mornings",
+        "description"<p>We will be staying in Cangas de Onis on the Cantabria/Asturias border. Bed and breakfast. Hotel Casa de Campo. It has a restaurant, but if you want an evening meal out in Cangas, the coach will transport you.</p>
+
+<p>We are going to break the long journey by stopping for one night on the way there in Tudela at the Hotel Sercotel, then one night on the return journey at the Hotel Tibur in Zaragoza. There will be plenty of comfort breaks when travelling.</p>
+
+<p>PRICE: €860 pp for a couple
+(320 single supplement)
+Price set for 40 persons to go.
+A €200 euro deposit per person will be required when putting your name down. If you pay by bank transfer, your surname and the letters &quot;Ast/Cant&quot; must be used as a reference so we know who sent it and which trip it refers to.
+Itinerary</p>
+
+<p>Depart Xalo on 12th September 2027 to Tudela for 1 night Hotel Sercotel (comfort breaks on the way).</p>
+
+<p>The coach will leave Xalo rastro car park, time to be arranged.</p>
+
+<p>Day 2—13/09—Breakfast, then drive to destination Cangas de Onis, Hotel Casa de Campo, time to unpack and stroll around and find somewhere to have your evening meal. As stated if you don't want to use the hotel restaurant, the coach will take us into Cangas. We are approximately 3 kilometres from the centre of the town.</p>
+
+<p>Day 3—14/09—Breakfast and depart to visit with a local guide:- Santander (capital of Cantabria). Pereda Gardens, Santander Cathedral. Lighthouse to view entire city and Magdalena peninsula. Lunchtime. Afternoon Santillana del Mar and a walking tour of its historic centre. Onwards then to Comillas, passing the Sobrellano Palace to visit Gaudi's Capricho (one of his first houses he designed, entrance inc). Return to Cangas de Onis and hotel.</p>
+
+<p>Day 4—15/09—Breakfast then visit Oviedo (capital of Asturias) with a local guide. Coach will take us on a panoramic tour of the city, passing the Palacio de Congresos, Campo de San Francisco and Campoamor theatre where the Princess of Asturias awards ceremony takes place, making our way to the Market. Lunchtime. Afternoon visit Gijon with a local guide. Return to our hotel.</p>
+
+<p>Day 5—16/09—Visit the famous Basilica of Covadonga along with the holy cave. Lunchtime. Afternoon visit Ribadesella and take a tour of the Lonja, Old Town, Fishing Port and Paseo Indiano. Return to our hotel.</p>
+
+<p>Day 6—17/09—Breakfast and depart to the Picos de Europa. Going through the Hermida gorge to Fuente Dé, where we can go up by cable car to admire the views of the Mirador del Cable. Continue onto the Monastry of Santo Toribio de Liébana, where the largest piece of the cross of Christ is preserved. We then visit Potes (capital of Picos de Europa) touring its historic centre. Lunchtime. Afternoon we visit San Vicente de la Barquera, a very popular fishing village on the Cantabrian coast. There is a castle here as well as a rich heritage. Return to hotel.</p>
+
+<p>Day 7—18/09—Breakfast and depart Cangas de Onis for El Soplao caves (entrance inc). Onward to Zaragoza, Hotel Tibur, (1 night) free time in the city.</p>
+
+<p>Day 8—19/09—Breakfast, depart Zaragoza to Xalo. Comfort breaks en route.</p>
+
+<p>Included in the price is all the coach travel, breakfasts, accommodation, an English speaking guide to accompany us and basic travel insurance. Lunches and evening meals are NOT included. Also 2 entrance fees included.</p>
+
+<p>Please be aware:- whilst every effort is made to accommodate all dietary requirements, it may be beneficial to carry your own snacks. Also regarding mobility—there is walking and climbing steps/stairs on some of the excursions and not sure if all hotels have a lift.</p>
+
+<p>To Book contact:-</p>
+
+<p>Sonia Higginson at GA's or coffee mornings</p>
+"
+    ",
         "category": "Trip",
         "image": "orig_cantabria.jpg"
     }
