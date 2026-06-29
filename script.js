@@ -144,34 +144,6 @@ const DEFAULT_ANNOUNCEMENTS = [
         "link": "calendar.html"
     }
 ];
-
-const DEFAULT_ANNOUNCEMENTS = [
-    {
-        "id": 1,
-        "header": "Come along and join in our next",
-        "title": "GENERAL ASSEMBLY",
-        "date": "THURSDAY 3RD SEPTEMBER 2026",
-        "location": "- POLIVALENT, MURLA -",
-        "link": "calendar.html"
-    },
-    {
-        "id": 2,
-        "header": "Members",
-        "title": "COFFEE MORNING",
-        "date": "THURSDAY 16TH JULY 2026",
-        "location": "- RESTOBAR QUIXOTE, ORBA -",
-        "link": "calendar.html"
-    },
-    {
-        "id": 3,
-        "header": "Friendship & Support",
-        "title": "COFFEE MORNING",
-        "date": "WEDNESDAY 1ST JULY 2026",
-        "location": "- MY MERCAT, XALO -",
-        "link": "calendar.html"
-    }
-];
-
 // ==========================================
 // ==========================================
 // ---- PASTE TO HERE ----
