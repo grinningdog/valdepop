@@ -1,0 +1,418 @@
+/* =========================================
+   1. RESET & BASE STYLES
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f4f4f4; 
+}
+
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+
+/* =========================================
+   2. NAVIGATION
+   ========================================= */
+.navbar { 
+    background-color: #ffffff; 
+    padding: 0.5rem 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border-bottom: 3px solid #97bc62; 
+}
+
+.nav-container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: nowrap; 
+}
+
+.logo-container { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+.logo { height: 45px; width: auto; }
+.logo-text { font-size: 1.1rem; font-weight: bold; color: #4a3f7f; white-space: nowrap; }
+
+.nav-menu { display: flex; list-style: none; gap: 0.2rem; flex-wrap: nowrap; margin: 0; padding: 0; }
+.nav-link { 
+    color: #2c5f2d; 
+    padding: 0.4rem 0.5rem; 
+    border-radius: 4px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    white-space: nowrap; 
+    transition: all 0.3s; 
+}
+.nav-link:hover, .nav-link.active { background-color: #97bc62; color: white; }
+
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 25px; height: 3px; background-color: #4a3f7f; margin: 3px 0; transition: 0.3s; }
+
+/* Navigation Dropdown */
+.nav-dropdown { position: relative; }
+.dropdown-menu { 
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background: white; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    border-radius: 4px; 
+    min-width: 220px; 
+    list-style: none; 
+    padding: 0.5rem 0; 
+    margin: 0; 
+    z-index: 1001; 
+    border-top: 3px solid #97bc62; 
+}
+.nav-dropdown:hover .dropdown-menu { display: block; }
+.dropdown-item { 
+    display: block; 
+    padding: 0.75rem 1.5rem; 
+    color: #2c5f2d; 
+    font-size: 0.9rem; 
+    font-weight: 600; 
+    white-space: nowrap; 
+    transition: background 0.3s, color 0.3s; 
+}
+.dropdown-item:hover { background: #f8f9f0; color: #4a3f7f; }
+.dropdown-toggle::after { content: ' ▾'; font-size: 0.8em; }
+
+/* =========================================
+   3. LAYOUT & HEADERS
+   ========================================= */
+.hero { position: relative; height: 500px; overflow: hidden; }
+.hero-image { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); }
+.hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; z-index: 1; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.hero-content p { font-size: 1.3rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+
+.page-header { 
+    background: linear-gradient(135deg, #4a3f7f 0%, #97bc62 100%); 
+    color: white; 
+    padding: 3rem 2rem; 
+    text-align: center; 
+}
+.page-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+
+/* =========================================
+   4. GRIDS & CARDS
+   ========================================= */
+.events-section, .latest-news-section, .announcements-section { margin-bottom: 4rem; }
+.events-section h2, .welcome-section h2, .latest-news-section h2, .announcements-section h2 { 
+    font-size: 1.8rem; 
+    color: #4a3f7f; 
+    margin-bottom: 2rem; 
+    text-align: center; 
+}
+
+/* 2-Column Grids (Events & Groups) */
+.events-grid, .groups-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    margin-bottom: 2rem; 
+}
+
+/* Flexible Grid (News) */
+.news-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 2rem; 
+}
+
+/* 4-Column Grid (Announcements) */
+.announcements-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+    margin-bottom: 2rem; 
+}
+
+/* Unified Card Styles */
+.event-card, .news-card, .group-card, .announcement-card { 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    display: flex; 
+    flex-direction: column; 
+}
+.event-card:hover, .news-card:hover, .group-card:hover, .announcement-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15); 
+}
+.group-card { border-top: 4px solid #97bc62; }
+
+.card-image { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+
+.event-date, .news-date { color: #97bc62; font-weight: bold; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.event-card h3, .news-card h3, .group-card h3 { color: #4a3f7f; margin-bottom: 0.75rem; font-size: 1.2rem; }
+.event-card p, .news-card p, .group-card p { color: #555; margin-bottom: 1rem; flex-grow: 1; }
+
+.event-category { display: inline-block; background-color: #4a3f7f; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; align-self: flex-start; }
+.read-more { color: #4a3f7f; font-weight: 600; align-self: flex-start; }
+.read-more:hover { color: #97bc62; }
+
+/* Card Actions (Buttons inside cards) */
+.card-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+
+/* =========================================
+   5. BUTTONS
+   ========================================= */
+.btn { 
+    display: inline-block; 
+    padding: 0.75rem 2rem; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    font-weight: 600;
+    transition: all 0.3s; 
+    text-align: center;
+}
+.btn-primary { background-color: #4a3f7f; color: white; }
+.btn-primary:hover { background-color: #3a3060; transform: translateY(-2px); }
+
+.btn-secondary { background-color: #97bc62; color: white; }
+.btn-secondary:hover { background-color: #7aa54a; transform: translateY(-2px); }
+
+/* Specific Button Variants (See More & Contact Leader) */
+.btn-see-more, .btn-contact-leader { 
+    background-color: #4a3f7f; 
+    color: white; 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 4px; 
+    font-size: 0.95rem; 
+    margin-top: auto;
+}
+.btn-see-more:hover, .btn-contact-leader:hover { 
+    background-color: #3a3060; 
+    transform: translateY(-2px); 
+}
+.btn-contact-leader { background-color: #97bc62; }
+.btn-contact-leader:hover { background-color: #7aa54a; }
+
+.card-actions .btn-see-more, .card-actions .btn-contact-leader { margin-top: 0; flex: 1; min-width: 140px; }
+.text-center { text-align: center; }
+
+/* =========================================
+   6. ANNOUNCEMENTS SPECIFICS (CORRECTED)
+   ========================================= */
+/* Makes the JS container invisible so the 4 cards flow into the grid perfectly */
+#announcementsContainer { display: contents; }
+
+/* --- TOP HALF (Colored Background) -> WHITE TEXT --- */
+.announcement-header { 
+    padding: 1rem 0.5rem; 
+    text-align: center; 
+    color: white; 
+}
+.announcement-header h3, .announcement-header h2 {
+    color: white; /* Force headers to be white */
+}
+.announcement-purple .announcement-header { background: linear-gradient(135deg, #4a3f7f 0%, #5a4f8f 100%); }
+.announcement-green .announcement-header { background: linear-gradient(135deg, #97bc62 0%, #7aa54a 100%); }
+
+.announcement-header h3 { font-size: 0.85rem; font-weight: normal; margin-bottom: 0.25rem; opacity: 0.95; }
+.announcement-header h2 { font-size: 1.1rem; font-weight: bold; margin: 0; line-height: 1.2; }
+
+/* --- BOTTOM HALF (White Background) -> DARK TEXT --- */
+.announcement-body { 
+    padding: 1rem 0.5rem; 
+    text-align: center; 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    color: #333; /* Dark text on white background */
+}
+
+.announcement-date { 
+    font-size: 0.9rem; 
+    color: #4a3f7f; /* Dark purple for date */
+    margin-bottom: 0.5rem; 
+    font-weight: bold;
+}
+
+.announcement-location { 
+    font-size: 0.85rem; 
+    color: #555; /* Dark grey for location */
+    margin-bottom: 1rem; 
+}
+
+/* --- BUTTON (Matches site theme) --- */
+.announcement-link { 
+    background-color: #4a3f7f; /* Purple button */
+    color: white; /* White text */
+    padding: 0.6rem 1.2rem; 
+    border-radius: 4px; 
+    font-size: 0.95rem; 
+    margin-top: auto;
+    font-weight: 600;
+}
+
+.announcement-link:hover { 
+    background-color: #97bc62; /* Turns green on hover */
+    color: white; 
+    transform: translateY(-2px); 
+}
+
+/* =========================================
+   7. PURPOSE SECTION
+   ========================================= */
+.purpose-section { margin: 4rem 0; }
+.purpose-container { 
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9f0 100%); 
+    padding: 3rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
+    border-top: 5px solid #97bc62; 
+    border-bottom: 5px solid #4a3f7f; 
+}
+.purpose-tagline { color: #4a3f7f; font-size: 1.6rem; text-align: center; margin-bottom: 2rem; line-height: 1.4; font-weight: 600; }
+.purpose-text p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem; color: #444; text-align: justify; }
+.purpose-actions { margin-top: 2.5rem; text-align: center; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* =========================================
+   8. NEWS FULL PAGE & CALENDAR
+   ========================================= */
+.news-list { display: flex; flex-direction: column; gap: 2rem; max-width: 900px; margin: 0 auto; }
+.news-item { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-left: 5px solid #4a3f7f; }
+.news-item-image { width: 100%; max-height: 350px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem; }
+.news-item h3 { color: #4a3f7f; margin-bottom: 0.5rem; font-size: 1.5rem; }
+
+.calendar-item { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 4px solid #97bc62; }
+
+/* =========================================
+   9. CONTACT & FORMS
+   ========================================= */
+.contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact-info, .contact-form { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #4a3f7f; font-weight: bold; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+
+/* =========================================
+   10. FOOTER & NEWSLETTER SIGNUP
+   ========================================= */
+.footer { background-color: #4a3f7f; color: white; padding: 2rem 0; margin-top: 4rem; }
+.footer-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.footer-links a { color: #97bc62; }
+.footer-links a:hover { color: white; }
+.copyright { border-top: 1px solid #5a4f8f; padding-top: 1rem; }
+
+.newsletter-signup {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.newsletter-signup h3 { color: #97bc62; font-size: 1.4rem; margin-bottom: 0.5rem; }
+.newsletter-signup p { color: #e0e0e0; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.newsletter-signup input[type="email"] { padding: 0.75rem; border-radius: 4px; border: none; width: 100%; max-width: 300px; margin-bottom: 0.5rem; font-size: 1rem; }
+.newsletter-signup button, .newsletter-signup input[type="submit"] { background-color: #97bc62; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
+.newsletter-signup button:hover, .newsletter-signup input[type="submit"]:hover { background-color: #7aa54a; }
+
+/* =========================================
+   11. MODALS
+   ========================================= */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; justify-content: center; align-items: center; padding: 1rem; }
+.modal-overlay.show { display: flex; }
+
+.group-modal-content, .event-modal-content { background: white; border-radius: 8px; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.modal-close-btn { position: absolute; top: 10px; right: 15px; background: rgba(255,255,255,0.9); border: none; font-size: 2rem; cursor: pointer; z-index: 10; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4a3f7f; }
+.modal-close-btn:hover { background: white; color: #c0392b; }
+
+#modalImageContainer img, #eventModalImageContainer img { width: 100%; max-height: 350px; object-fit: cover; border-radius: 8px 8px 0 0; }
+.modal-body { padding: 2rem; }
+.modal-body h2 { color: #4a3f7f; margin-top: 0; margin-bottom: 1rem; }
+.modal-body p { line-height: 1.8; color: #444; margin-bottom: 1rem; }
+.modal-meta { background: #f8f9f0; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; border-left: 4px solid #97bc62; }
+.modal-meta p { margin-bottom: 0.5rem; font-weight: 500; }
+.modal-meta p:last-child { margin-bottom: 0; }
+
+/* =========================================
+   12. UTILITIES (Back to Top)
+   ========================================= */
+.back-to-top {
+    position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px;
+    background-color: #4a3f7f; color: white; border: none; border-radius: 50%;
+    cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); opacity: 0; visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.3s; z-index: 999;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background-color: #97bc62; transform: translateY(-3px); }
+
+/* =========================================
+   13. RESPONSIVE DESIGN (Mobile & Tablet)
+   ========================================= */
+@media (max-width: 1200px) { 
+    /* Drop announcements to 2 columns on tablets/smaller desktops */
+    .announcements-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+@media (max-width: 992px) {
+    .nav-toggle { display: flex; flex-direction: column; }
+    .nav-menu { 
+        position: fixed; left: -100%; top: 60px; flex-direction: column; 
+        background-color: white; width: 100%; text-align: center; 
+        transition: 0.3s; padding: 2rem 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+    }
+    .nav-menu.active { left: 0; }
+    .nav-link { display: block; padding: 1rem; margin: 0.5rem 0; font-size: 1rem; }
+    
+    /* Mobile Dropdowns */
+    .dropdown-menu { position: static; box-shadow: none; background: #f8f9f0; border-top: none; border-radius: 0; display: none; }
+    .nav-menu.active .dropdown-menu { display: block; }
+    .dropdown-item { padding-left: 2.5rem; font-size: 1rem; }
+    .dropdown-toggle::after { display: none; }
+
+    .hero-content h1 { font-size: 2rem; }
+    .contact-section { grid-template-columns: 1fr; }
+    
+    /* Force 1 column on mobile for standard grids */
+    .events-grid, .groups-grid { grid-template-columns: 1fr; }
+    
+    .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; }
+}
+
+@media (max-width: 768px) { 
+    /* Drop announcements to 1 column on mobile phones */
+    .announcements-grid { grid-template-columns: 1fr; } 
+}
+
+/* Add spacing between See More button and category badge */
+.event-card .event-category {
+    margin-top: 1rem;
+}
+
+/* Align images to top when they don't fit perfectly */
+.card-image {
+    object-position: top;
+}
+
+/* Align images to top when they don't fit perfectly */
+.card-image,
+.news-item-image {
+    object-position: top;
+}

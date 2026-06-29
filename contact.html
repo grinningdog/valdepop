@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - U3A Vall del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="U3A Vall del Pop Logo" class="logo">
+                <span class="logo-text">U3A Vall del Pop</span>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+           <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    
+    <!-- Dropdown Menu -->
+    <li class="nav-dropdown">
+        <a href="events-trips.html" class="nav-link dropdown-toggle">Events and Trips</a>
+        <ul class="dropdown-menu">
+            <li><a href="events-trips.html" class="dropdown-item">What's On</a></li>
+            <li><a href="goodwill-team.html" class="dropdown-item">Goodwill Team</a></li>
+            <li><a href="travel-entertainment.html" class="dropdown-item">Travel and Entertainment</a></li>
+        </ul>
+    </li>
+
+    <li><a href="activity-groups.html" class="nav-link">Activity Groups</a></li>
+    <li><a href="friendship-support.html" class="nav-link">Friendship and Support</a></li>
+    <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+    <li class="nav-dropdown">
+    <a href="about.html" class="nav-link dropdown-toggle">About</a>
+    <ul class="dropdown-menu">
+        <li><a href="about.html" class="dropdown-item">About</a></li>
+        <li><a href="committee.html" class="dropdown-item">The Committee</a></li>
+        <li><a href="agm-reports.html" class="dropdown-item">AGM Reports</a></li>
+        <li><a href="memberships.html" class="dropdown-item">Memberships</a></li>
+        <li><a href="policies.html" class="dropdown-item">Policies and Procedures</a></li>
+    </ul>
+</li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch with U3A Vall del Pop</p>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> info@u3avalldelpop.org</p>
+                <p><strong>Location:</strong> Vall del Pop Region, Spain</p>
+                <p>We'd love to hear from you! Whether you have questions about membership, activities, or just want to say hello, please don't hesitate to get in touch.</p>
+            </div>
+            
+            <!-- Web3Forms Contact Form -->
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- PLACEHOLDER: Replace the value below with your actual Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                
+                <!-- Optional: Sets the subject line of the email you receive -->
+                <input type="hidden" name="subject" value="New Contact Form Submission from U3A Website">
+                
+                <!-- Optional: Honeypot spam protection (keep hidden) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="data-protection.html">Data Protection Policy</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 U3A Vall del Pop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

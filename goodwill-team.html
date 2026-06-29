@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodwill Team - U3A Vall del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Specific styles for this page -->
+    <style>
+        .goodwill-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .goodwill-image-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .goodwill-image {
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .goodwill-text h2 {
+            color: #4a3f7f;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .goodwill-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .goodwill-text ul {
+            background: #f8f9f0;
+            padding: 2rem 2rem 2rem 3.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #97bc62;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        .goodwill-text li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 0.5rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2.5rem 0;
+        }
+
+        .btn-download {
+            background-color: #97bc62;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background-color: #7aa54a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-contact {
+            background-color: #4a3f7f;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-contact:hover {
+            background-color: #3a3060;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="U3A Vall del Pop Logo" class="logo">
+                <span class="logo-text">U3A Vall del Pop</span>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="events-trips.html" class="nav-link dropdown-toggle">Events and Trips</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-trips.html" class="dropdown-item">What's On</a></li>
+                        <li><a href="goodwill-team.html" class="dropdown-item">Goodwill Team</a></li>
+                        <li><a href="travel-entertainment.html" class="dropdown-item">Travel and Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="activity-groups.html" class="nav-link">Activity Groups</a></li>
+                <li><a href="friendship-support.html" class="nav-link">Friendship and Support</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li class="nav-dropdown">
+    <a href="about.html" class="nav-link dropdown-toggle">About</a>
+    <ul class="dropdown-menu">
+        <li><a href="about.html" class="dropdown-item">About</a></li>
+        <li><a href="committee.html" class="dropdown-item">The Committee</a></li>
+        <li><a href="agm-reports.html" class="dropdown-item">AGM Reports</a></li>
+        <li><a href="memberships.html" class="dropdown-item">Memberships</a></li>
+        <li><a href="policies.html" class="dropdown-item">Policies and Procedures</a></li>
+    </ul>
+</li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Goodwill Team</h1>
+        <p>Supporting our community</p>
+    </header>
+
+    <main class="container">
+        <section class="goodwill-content">
+            
+            <!-- IMPORTANT: Make sure your image filename matches exactly what is below -->
+            <div class="goodwill-image-container">
+                <img src="goodwill-team-logo.png" alt="Goodwill Team Logo" class="goodwill-image">
+            </div>
+
+            <div class="goodwill-text">
+                <h2>Welcome to the Goodwill Team</h2>
+                
+                <p>The Goodwill team, the charity fundraising arm of the u3a Vall del Pop, hold regular fundraising events for the enjoyment of members and to raise funds for local charities.</p>
+                
+                <p>These can include:</p>
+                
+                <ul>
+                    <li>Car boot sales</li>
+                    <li>Quizzes</li>
+                    <li>Social events</li>
+                    <li>Craft days</li>
+                    <li>Music events</li>
+                    <li>BBQs</li>
+                    <li>Afternoon teas etc.</li>
+                </ul>
+
+                <p>The monies raised on an annual basis are shared amongst selected local charities at year end.</p>
+
+                <p>Events are advertised on the website and in the monthly newsletter and can be booked and paid for at the monthly General Assemblies and coffee mornings. To contact the Goodwill Team click the button below.</p>
+            </div>
+
+            <!-- IMPORTANT: Make sure your PDF filename matches exactly what is below -->
+            <div class="button-group">
+                <a href="Goodwill-Team-Info-Pack.pdf" download class="btn-download">Download Information Pack (PDF)</a>
+                <a href="contact-goodwill.html" class="btn-contact">Contact Goodwill Team</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="data-protection.html">Data Protection Policy</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 U3A Vall del Pop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

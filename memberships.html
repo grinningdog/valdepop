@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberships - U3A Vall del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .membership-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .membership-content h2 {
+            color: #4a3f7f;
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .membership-content h3 {
+            color: #4a3f7f;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .membership-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        .membership-content ul {
+            background: #f8f9f0;
+            padding: 1.5rem 1.5rem 1.5rem 3rem;
+            border-radius: 8px;
+            border-left: 5px solid #97bc62;
+            margin: 1.5rem 0;
+        }
+
+        .membership-content li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 0.75rem;
+        }
+
+        .bank-details-box {
+            background: #f8f9f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #97bc62;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .bank-details-box p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .bank-details-box strong {
+            color: #2c5f2d;
+            display: inline-block;
+            min-width: 140px;
+        }
+
+        .iban-text {
+            font-family: monospace;
+            font-size: 1.05rem;
+            background: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn-contact {
+            background-color: #4a3f7f;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-contact:hover {
+            background-color: #3a3060;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .divider {
+            width: 75%;
+            margin: 3rem auto;
+            border: none;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .forms-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .forms-section h2 {
+            border-bottom: none;
+            text-align: center;
+        }
+
+        .form-download-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .form-download-item h3 {
+            margin: 0;
+            color: #4a3f7f;
+            font-size: 1.2rem;
+        }
+
+        .btn-download {
+            background-color: #97bc62;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background-color: #7aa54a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="U3A Vall del Pop Logo" class="logo">
+                <span class="logo-text">U3A Vall del Pop</span>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="events-trips.html" class="nav-link dropdown-toggle">Events and Trips</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-trips.html" class="dropdown-item">What's On</a></li>
+                        <li><a href="goodwill-team.html" class="dropdown-item">Goodwill Team</a></li>
+                        <li><a href="travel-entertainment.html" class="dropdown-item">Travel and Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="activity-groups.html" class="nav-link">Activity Groups</a></li>
+                <li><a href="friendship-support.html" class="nav-link">Friendship and Support</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-link dropdown-toggle active">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" class="dropdown-item">About</a></li>
+                        <li><a href="committee.html" class="dropdown-item">The Committee</a></li>
+                        <li><a href="agm-reports.html" class="dropdown-item">AGM Reports</a></li>
+                        <li><a href="memberships.html" class="dropdown-item active">Memberships</a></li>
+                        <li><a href="policies.html" class="dropdown-item">Policies and Procedures</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Memberships</h1>
+        <p>Join our community of learners</p>
+    </header>
+
+    <main class="container">
+        <section class="membership-content">
+            
+            <h2>Annual Subscription</h2>
+            <p>New members and lapsed members pay the relevant renewal fee, currently €10 plus an admin charge of €5</p>
+                <p>Existing members pay the relevant renewal fee, currently €10. </p>
+            
+            <p>These amounts are subject to an annual review by the Committee.</p>
+            <p>A membership card will be issued to all members and will be available for collection at General Assemblies.</p>
+
+            <h2>Group Charges</h2>
+            <p>A small charge may also be payable to leaders of any groups you attend, to cover the cost of refreshments and other expenses. Some groups may charge a little extra if there are significant other costs, for instance to pay a teacher, and this is normally stated on the group's own news page on this website.</p>
+
+            <div class="button-group">
+                <a href="mailto:bob@westwight.net?subject=Membership Query" class="btn-contact">Contact Membership Secretary</a>
+            </div>
+
+            <h2>New Members/Lapsed Members</h2>
+            <p>Apart from the annual and administrative charge for the first year or part year, you will need to download the membership application form here. When completed, it can be taken to a monthly General Assembly or Coffee Morning, dates of which are on the website.</p>
+
+            <h2>Membership Renewal</h2>
+            <p>Members who renew their membership by 31 March in the relevant year will pay the annual renewal fee, currently €10. This can be done at General Assemblies, Coffee Mornings (details of these events can be found on the website) or via payment by bank transfer. Details of our bank account are:</p>
+
+            <div class="bank-details-box">
+                <p><strong>Account Name:</strong> La Tercera Edad Del Valle Del Pop</p>
+                <p><strong>IBAN:</strong> <span class="iban-text">ES26 2100 6033 2102 0003 8126</span></p>
+            </div>
+
+            <p>If renewing by bank transfer, please ensure you state your surname(s) and membership number(s) on the transfer document. Your card will be waiting for you to collect or, alternatively, you can ask somebody to collect it for you. There is no need to complete any forms.</p>
+
+            <h2>Change of Details</h2>
+            <p>If your details have changed, ie address, telephone number, email, etc, please let the Membership Secretary know as soon as possible by downloading and completing the Change of Details form. This is particularly important for email changes as, without a current email address, you will not be receiving updates.</p>
+
+            <h2>Data Protection</h2>
+            <p>It is a requirement of the Data Protection Act that we delete any data we have on file when a person is no longer a member.</p>
+            <p>Those who have not renewed their membership by 31 March in the relevant year will be removed from the u3a database and will no longer receive updates or be permitted to take part in Group, travel or any other activity/ies arranged by the u3a Vall del Pop.</p>
+            <p>Still not sure if you want to join us? Then take advantage of our "try before you buy", whereby you can attend a General Assembly or a group activity that may interest you, but to continue you will be asked to join. For the latter, please check with the Group Leader, details of which can be found on the website.</p>
+
+            <hr class="divider">
+
+            <div class="forms-section">
+                <h2>Membership Forms</h2>
+
+                <div class="form-download-item">
+                    <h3>Membership Application</h3>
+                    <a href="downloads/forms/Mem App form Jul 2024.pdf" download class="btn-download">Download PDF</a>
+                </div>
+
+                <div class="form-download-item">
+                    <h3>Change of Details</h3>
+                    <a href="downloads/forms/Mem change details-jul-24.pdf" download class="btn-download">Download PDF</a>
+                </div>
+
+                <div class="form-download-item">
+                    <h3>Renewal of Consent</h3>
+                    <a href="downloads/forms/Mem Renewal-jul-24.pdf" download class="btn-download">Download PDF</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="data-protection.html">Data Protection Policy</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 U3A Vall del Pop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

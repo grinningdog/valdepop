@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - U3A Vall del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <img src="logo.png" alt="U3A Vall del Pop Logo" class="login-logo">
+            <h2>Admin Login</h2>
+            <p>Please enter the admin password to continue.</p>
+            <form id="loginForm">
+                <input type="password" id="passwordInput" placeholder="Enter Password" required>
+                <button type="submit" class="btn btn-primary full-width">Login</button>
+            </form>
+            <p id="loginError" class="error-text" style="display:none;">Incorrect password. Please try again.</p>
+            <a href="index.html" class="back-link">← Return to Website</a>
+        </div>
+    </div>
+
+    <div id="adminPanel" class="admin-panel" style="display:none;">
+        <div class="admin-header">
+            <div class="admin-logo">
+                <img src="logo.png" alt="Logo" class="logo">
+                <span>U3A Vall del Pop - Admin Panel</span>
+            </div>
+            <div class="admin-actions">
+                <button class="btn btn-secondary" onclick="exportData()">⬇ Export Data</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">⬆ Import Data</button>
+                <input type="file" id="importFile" style="display:none;" accept=".json" onchange="importData(event)">
+                <button class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="events">📅 Events & Trips</button>
+            <button class="tab-btn" data-tab="news">📰 Latest News</button>
+            <button class="tab-btn" data-tab="groups">👥 Activity Groups</button>
+            <button class="tab-btn" data-tab="announcements">📢 Announcements</button>
+        </div>
+
+        <div class="tab-content active" id="tab-events">
+            <div class="tab-header">
+                <h2>Events & Trips</h2>
+                <button class="btn btn-primary" onclick="openModal('event')">+ Add New Event</button>
+            </div>
+            <div id="eventsList" class="admin-list"></div>
+        </div>
+
+        <div class="tab-content" id="tab-news">
+            <div class="tab-header">
+                <h2>Latest News</h2>
+                <button class="btn btn-primary" onclick="openModal('news')">+ Add New News Item</button>
+            </div>
+            <div id="newsList" class="admin-list"></div>
+        </div>
+
+        <div class="tab-content" id="tab-groups">
+            <div class="tab-header">
+                <h2>Activity Groups</h2>
+                <button class="btn btn-primary" onclick="openModal('group')">+ Add New Group</button>
+            </div>
+            <div id="groupsList" class="admin-list"></div>
+        </div>
+
+        <div class="tab-content" id="tab-announcements">
+            <div class="tab-header">
+                <h2>Announcements</h2>
+                <button class="btn btn-primary" onclick="openModal('announcement')">+ Add New Announcement</button>
+            </div>
+            <div id="announcementsList" class="admin-list"></div>
+        </div>
+    </div>
+
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Item</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="itemForm" class="admin-form">
+                <input type="hidden" id="itemId">
+                <input type="hidden" id="itemType">
+
+                <div class="form-group field-event" style="display:none;">
+                    <label>Event Title *</label><input type="text" id="eventTitle">
+                </div>
+                <div class="form-group field-event" style="display:none;">
+                    <label>Date *</label><input type="text" id="eventDate" placeholder="e.g. July 15, 2026">
+                </div>
+                <div class="form-group field-event" style="display:none;">
+                    <label>Description *</label><textarea id="eventDesc" rows="3"></textarea>
+                </div>
+                <div class="form-group field-event" style="display:none;">
+                    <label>Category</label>
+                    <select id="eventCategory">
+                        <option>Trip</option><option>Outing</option><option>Cultural Trip</option>
+                        <option>Social</option><option>Activity</option><option>Workshop</option><option>Meeting</option>
+                    </select>
+                </div>
+                <div class="form-group field-event" style="display:none;">
+                    <label>Image Filename</label>
+                    <input type="text" id="eventImage" placeholder="e.g. myimage.jpg">
+                </div>
+
+                <div class="form-group field-news" style="display:none;">
+                    <label>News Title *</label><input type="text" id="newsTitle">
+                </div>
+                <div class="form-group field-news" style="display:none;">
+                    <label>Date *</label><input type="text" id="newsDate" placeholder="e.g. June 25, 2026">
+                </div>
+                <div class="form-group field-news" style="display:none;">
+                    <label>Short Excerpt *</label><textarea id="newsExcerpt" rows="2"></textarea>
+                </div>
+                <div class="form-group field-news" style="display:none;">
+                    <label>Full Content *</label><textarea id="newsContent" rows="6"></textarea>
+                </div>
+                <div class="form-group field-news" style="display:none;">
+                    <label>Image Filename</label>
+                    <input type="text" id="newsImage" placeholder="e.g. myimage.jpg">
+                </div>
+
+                <div class="form-group field-group" style="display:none;">
+                    <label>Group Name *</label><input type="text" id="groupName">
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Description *</label><textarea id="groupDesc" rows="3"></textarea>
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Meeting Day/Time</label><input type="text" id="groupDay" placeholder="e.g. Mondays 10:00 AM">
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Contact Person</label><input type="text" id="groupContact" placeholder="e.g. John Smith">
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Image Filename</label>
+                    <input type="text" id="groupImage" placeholder="e.g. myimage.jpg">
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Group Leader Email</label>
+                    <input type="email" id="groupEmail" placeholder="leader@example.com">
+                    <small class="helper-text">Leave blank to hide the contact button.</small>
+                </div>
+                <div class="form-group field-group" style="display:none;">
+                    <label>Email Subject</label>
+                    <input type="text" id="groupSubject" placeholder="e.g. Enquiry about Art Group">
+                </div>
+
+                <div class="form-group field-announcement" style="display:none;">
+                    <label>Header Text (Small)</label><input type="text" id="annHeader" placeholder="e.g. Come along and join in our next">
+                </div>
+                <div class="form-group field-announcement" style="display:none;">
+                    <label>Title Text (Large)</label><input type="text" id="annTitle" placeholder="e.g. GENERAL ASSEMBLY">
+                </div>
+                <div class="form-group field-announcement" style="display:none;">
+                    <label>Date *</label><input type="text" id="annDate" placeholder="e.g. THURSDAY 3RD SEPTEMBER 2026">
+                </div>
+                <div class="form-group field-announcement" style="display:none;">
+                    <label>Location *</label><input type="text" id="annLocation" placeholder="e.g. - POLIVALENT, MURLA -">
+                </div>
+                <div class="form-group field-announcement" style="display:none;">
+                    <label>Link URL</label><input type="text" id="annLink" placeholder="e.g. calendar.html">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Saved successfully!</div>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - u3a Vall del Pop in the Jalon Valley, Costa Blanca, Spain</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2477728');
+    </script>
+    <!-- End MailerLite Universal -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="U3A Vall del Pop Logo" class="logo">
+                <span class="logo-text">U3A Vall del Pop</span>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="events-trips.html" class="nav-link dropdown-toggle">Events and Trips</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events-trips.html" class="dropdown-item">What's On</a></li>
+                        <li><a href="goodwill-team.html" class="dropdown-item">Goodwill Team</a></li>
+                        <li><a href="travel-entertainment.html" class="dropdown-item">Travel and Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="activity-groups.html" class="nav-link">Activity Groups</a></li>
+                <li><a href="friendship-support.html" class="nav-link">Friendship and Support</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li class="nav-dropdown">
+    <a href="about.html" class="nav-link dropdown-toggle">About</a>
+    <ul class="dropdown-menu">
+        <li><a href="about.html" class="dropdown-item">About</a></li>
+        <li><a href="committee.html" class="dropdown-item">The Committee</a></li>
+        <li><a href="agm-reports.html" class="dropdown-item">AGM Reports</a></li>
+        <li><a href="memberships.html" class="dropdown-item">Memberships</a></li>
+        <li><a href="policies.html" class="dropdown-item">Policies and Procedures</a></li>
+    </ul>
+</li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <img src="orange-grove.jpg" alt="Orange groves in Jalon Valley" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to u3a Vall del Pop</h1>
+            <p>Learning, Friendship, and Fun in the Jalon Valley</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- ANNOUNCEMENTS SECTION (Moved to the top, right under the banner) -->
+        <section class="announcements-section">
+            <div class="announcements-grid">
+                
+                <!-- The first 3 cards are loaded here by script.js -->
+                <div id="announcementsContainer"></div>
+
+                <!-- The 4th Card: Newsletter Download -->
+                <div class="announcement-card announcement-green">
+                    <div class="announcement-header">
+                        <h3>Read our latest</h3>
+                        <h2>NEWSLETTER</h2>
+                    </div>
+                    <div class="announcement-body">
+                        <p class="announcement-date"><strong>June 2026 Edition</strong></p>
+                        <p class="announcement-location"><strong>- Download PDF -</strong></p>
+                        <a href="2026.06.pdf" target="_blank" class="announcement-link">Click Here to Download</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PURPOSE SECTION (Moved below the announcements) -->
+        <section class="purpose-section">
+            <div class="purpose-container">
+                <p class="purpose-tagline">"The purpose of the u3a is to encourage life-long learning for people who are no longer in full time employment."</p>
+                <div class="purpose-text">
+                    <p>The u3a Vall del Pop is a self-help organisation for people no longer in full-time employment. We offer a wide range of learning activities and social events for our members. Our aim is to provide a friendly and supportive environment where members can share their knowledge and skills, learn new things, and make new friends.</p>
+                    <p>We have a diverse range of activity groups, from art and crafts to walking and dancing. We also organise regular social events, trips, and outings. Whether you are looking to learn a new skill, stay active, or simply meet new people, the u3a Vall del Pop has something for everyone.</p>
+                </div>
+                <div class="purpose-actions">
+                    <a href="activity-groups.html" class="btn btn-primary">View Activity Groups</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div id="eventsContainer" class="events-grid">
+                <!-- Events will be loaded dynamically by script.js -->
+            </div>
+            <div class="text-center">
+                <a href="events-trips.html" class="btn btn-primary">View All Events</a>
+            </div>
+        </section>
+
+        <section class="latest-news-section">
+            <h2>Latest News</h2>
+            <div id="newsContainer" class="news-grid">
+                <!-- News will be loaded dynamically by script.js -->
+            </div>
+            <div class="text-center">
+                <a href="latest-news.html" class="btn btn-primary">View All News</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- The Event Popup Modal (Hidden by default) -->
+    <div id="eventModal" class="modal-overlay">
+        <div class="modal-content event-modal-content">
+            <button class="modal-close-btn" onclick="closeEventModal()">&times;</button>
+            <div id="eventModalImageContainer"></div>
+            <div class="modal-body">
+                <h2 id="eventModalTitle"></h2>
+                <div class="modal-meta">
+                    <p id="eventModalDate"></p>
+                    <p id="eventModalCategory"></p>
+                </div>
+                <p id="eventModalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <!-- MAILERLITE NEWSLETTER SECTION -->
+            <div class="newsletter-signup">
+                <h3>Join Our Newsletter</h3>
+                <p>Get the latest news and events delivered to your inbox.</p>
+                
+                <!-- PASTE YOUR MAILERLITE EMBEDDED FORM CODE HERE -->
+                <!-- Example: <div class="ml-embedded" data-form="...">...</div> -->
+                <!-- END MAILERLITE CODE -->
+
+            </div>
+
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="data-protection.html">Data Protection Policy</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 U3A Vall del Pop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads - U3A Vall del Pop</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Specific styles for the downloads page -->
+    <style>
+        .downloads-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .download-category {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #97bc62;
+        }
+        
+        .download-category h2 {
+            color: #4a3f7f;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .file-count {
+            background: #97bc62;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+        
+        .download-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+        
+        .download-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .download-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .download-list a {
+            color: #4a3f7f;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+        
+        .download-list a:hover {
+            color: #97bc62;
+        }
+        
+        .download-list a::before {
+            content: "📄";
+            font-size: 1.2rem;
+        }
+        
+        .download-list a:hover::before {
+            content: "📥";
+        }
+        
+        .empty-category {
+            color: #999;
+            font-style: italic;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="U3A Vall del Pop Logo" class="logo">
+                <span class="logo-text">U3A Vall del Pop</span>
+            </div>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+           <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    
+    <!-- Dropdown Menu -->
+    <li class="nav-dropdown">
+        <a href="events-trips.html" class="nav-link dropdown-toggle">Events and Trips</a>
+        <ul class="dropdown-menu">
+            <li><a href="events-trips.html" class="dropdown-item">What's On</a></li>
+            <li><a href="goodwill-team.html" class="dropdown-item">Goodwill Team</a></li>
+            <li><a href="travel-entertainment.html" class="dropdown-item">Travel and Entertainment</a></li>
+        </ul>
+    </li>
+
+    <li><a href="activity-groups.html" class="nav-link">Activity Groups</a></li>
+    <li><a href="friendship-support.html" class="nav-link">Friendship and Support</a></li>
+    <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+   <li class="nav-dropdown">
+    <a href="about.html" class="nav-link dropdown-toggle">About</a>
+    <ul class="dropdown-menu">
+        <li><a href="about.html" class="dropdown-item">About</a></li>
+        <li><a href="committee.html" class="dropdown-item">The Committee</a></li>
+        <li><a href="agm-reports.html" class="dropdown-item">AGM Reports</a></li>
+        <li><a href="memberships.html" class="dropdown-item">Memberships</a></li>
+        <li><a href="policies.html" class="dropdown-item">Policies and Procedures</a></li>
+    </ul>
+</li>
+    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Downloads</h1>
+        <p>Access our documents, forms, and reports</p>
+    </header>
+
+    <main class="container">
+        <section class="downloads-section">
+            
+            <!-- AGM Reports -->
+            <div class="download-category">
+                <h2>AGM Reports <span class="file-count">4 files</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/agm-reports/agm-2025.pdf" target="_blank">AGM Report 2025</a></li>
+                    <li><a href="downloads/agm-reports/agm-2024.pdf" target="_blank">AGM Report 2024</a></li>
+                    <li><a href="downloads/agm-reports/agm-2023.pdf" target="_blank">AGM Report 2023</a></li>
+                    <li><a href="downloads/agm-reports/agm-2022.pdf" target="_blank">AGM Report 2022</a></li>
+                </ul>
+            </div>
+
+            <!-- General Assembly Minutes -->
+            <div class="download-category">
+                <h2>General Assembly Minutes <span class="file-count">1 file</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/minutes/ga-minutes-2025.pdf" target="_blank">General Assembly Minutes 2025</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletters -->
+            <div class="download-category">
+                <h2>Newsletters <span class="file-count">12 files</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/newsletters/newsletter-june-2026.pdf" target="_blank">Newsletter - June 2026</a></li>
+                    <li><a href="downloads/newsletters/newsletter-may-2026.pdf" target="_blank">Newsletter - May 2026</a></li>
+                    <li><a href="downloads/newsletters/newsletter-april-2026.pdf" target="_blank">Newsletter - April 2026</a></li>
+                    <li><a href="downloads/newsletters/newsletter-march-2026.pdf" target="_blank">Newsletter - March 2026</a></li>
+                    <li><a href="downloads/newsletters/newsletter-february-2026.pdf" target="_blank">Newsletter - February 2026</a></li>
+                    <li><a href="downloads/newsletters/newsletter-january-2026.pdf" target="_blank">Newsletter - January 2026</li>
+                    <li><a href="downloads/newsletters/newsletter-december-2025.pdf" target="_blank">Newsletter - December 2025</a></li>
+                    <li><a href="downloads/newsletters/newsletter-november-2025.pdf" target="_blank">Newsletter - November 2025</a></li>
+                    <li><a href="downloads/newsletters/newsletter-october-2025.pdf" target="_blank">Newsletter - October 2025</a></li>
+                    <li><a href="downloads/newsletters/newsletter-september-2025.pdf" target="_blank">Newsletter - September 2025</a></li>
+                    <li><a href="downloads/newsletters/newsletter-august-2025.pdf" target="_blank">Newsletter - August 2025</a></li>
+                    <li><a href="downloads/newsletters/newsletter-july-2025.pdf" target="_blank">Newsletter - July 2025</a></li>
+                </ul>
+            </div>
+
+            <!-- Membership Forms -->
+            <div class="download-category">
+                <h2>Membership Forms <span class="file-count">3 files</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/forms/membership-application.pdf" target="_blank">Membership Application Form</a></li>
+                    <li><a href="downloads/forms/change-of-details.pdf" target="_blank">Change of Details Form</a></li>
+                    <li><a href="downloads/forms/membership-renewal.pdf" target="_blank">Membership Renewal Form</a></li>
+                </ul>
+            </div>
+
+            <!-- Group Leader Forms -->
+            <div class="download-category">
+                <h2>Group Leader Forms <span class="file-count">6 files</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/group-leaders/new-group-proposal.pdf" target="_blank">New Group Proposal Form</a></li>
+                    <li><a href="downloads/group-leaders/group-leader-application.pdf" target="_blank">Group Leader Application</a></li>
+                    <li><a href="downloads/group-leaders/attendance-register.pdf" target="_blank">Attendance Register Template</a></li>
+                    <li><a href="downloads/group-leaders/risk-assessment.pdf" target="_blank">Risk Assessment Form</a></li>
+                    <li><a href="downloads/group-leaders/incident-report.pdf" target="_blank">Incident Report Form</a></li>
+                    <li><a href="downloads/group-leaders/group-budget.pdf" target="_blank">Group Budget Template</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies & Procedures -->
+            <div class="download-category">
+                <h2>Policies & Procedures <span class="file-count">7 files</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/policies/constitution.pdf" target="_blank">U3A Constitution</a></li>
+                    <li><a href="downloads/policies/health-safety-policy.pdf" target="_blank">Health & Safety Policy</a></li>
+                    <li><a href="downloads/policies/safeguarding-policy.pdf" target="_blank">Safeguarding Policy</a></li>
+                    <li><a href="downloads/policies/complaints-procedure.pdf" target="_blank">Complaints Procedure</a></li>
+                    <li><a href="downloads/policies/equality-policy.pdf" target="_blank">Equality & Diversity Policy</a></li>
+                    <li><a href="downloads/policies/finance-policy.pdf" target="_blank">Finance Policy</a></li>
+                    <li><a href="downloads/policies/gdpr-procedures.pdf" target="_blank">GDPR Procedures Guide</a></li>
+                </ul>
+            </div>
+
+            <!-- General -->
+            <div class="download-category">
+                <h2>General <span class="file-count">1 file</span></h2>
+                <ul class="download-list">
+                    <li><a href="downloads/general/u3a-guide.pdf" target="_blank">U3A Vall del Pop Member's Guide</a></li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="data-protection.html">Data Protection Policy</a>
+                <a href="downloads.html">Downloads</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 U3A Vall del Pop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
