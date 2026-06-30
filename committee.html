@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Committee - U3A Vall del Pop</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .committee-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .committee-title {
+            text-align: center;
+            color: #4a3f7f;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .committee-member {
+            text-align: center;
+        }
+
+        .committee-member img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .committee-member img:hover {
+            transform: scale(1.05);
+        }
+
+        .committee-member h4 {
+            color: #4a3f7f;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .committee-member h5 {
+            color: #555;
+            font-size: 0.95rem;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .committee-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .committee-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .committee-member img {
+                max-width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .committee-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -48,9 +128,72 @@
     </header>
 
     <main class="container">
-        <section class="content-section">
-            <h2>Our Committee Members</h2>
-            <p>Add your committee information here.</p>
+        <section class="committee-section">
+            <h2 class="committee-title">Committee 2026-2027</h2>
+            
+            <div class="committee-grid">
+                
+                <div class="committee-member">
+                    <img src="images/committee/chris-barrett.jpg" alt="Chris Barrett">
+                    <h4>President</h4>
+                    <h5>Chris Barrett</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/Roger-Bentley.jpg" alt="Roger Bentley">
+                    <h4>Treasurer</h4>
+                    <h5>Roger Bentley</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/paula-barrett.jpg" alt="Paula Barrett">
+                    <h4>Secretary</h4>
+                    <h5>Paula Barrett</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/asst-sec_300.jpg" alt="Linda Burns">
+                    <h4>Assistant Secretary</h4>
+                    <h5>Linda Burns</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/Barbara.jpg" alt="Barbara Bentley">
+                    <h4>Membership Secretary</h4>
+                    <h5>Barbara Bentley</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/teresa-tillbrook.jpg" alt="Teresa Tillbrook">
+                    <h4>Groups Co-Ordinator</h4>
+                    <h5>Teresa Tillbrook</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/mary-bacon.jpg" alt="Mary Bacon">
+                    <h4>Hospitality Officer</h4>
+                    <h5>Mary Bacon</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/gerry-bacon.jpg" alt="Gerry Bacon">
+                    <h4>Hospitality Officer</h4>
+                    <h5>Gerry Bacon</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/christine-rowland.jpg" alt="Christine Rowland">
+                    <h4>Vocal</h4>
+                    <h5>Christine Rowland</h5>
+                </div>
+
+                <div class="committee-member">
+                    <img src="images/committee/brigid-redmond.jpg" alt="Brigid Redmond">
+                    <h4>Vocal</h4>
+                    <h5>Brigid Redmond</h5>
+                </div>
+
+            </div>
         </section>
     </main>
 
